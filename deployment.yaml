@@ -21,7 +21,7 @@ spec:
       - name: webproject
         image: meraazregistry.azurecr.io/webserver:web14  
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         resources:
           requests:
             cpu: 250m
