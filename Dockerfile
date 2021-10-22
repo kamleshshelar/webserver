@@ -1,5 +1,4 @@
-FROM centos:latest
-RUN yum -y install httpd
-COPY index.html /var/www/html/
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
-EXPOSE 80
+FROM tomcat:8.0-alpine
+ADD sample.war /usr/local/tomcat/webapps
+EXPOSE 8080
+CMD ["catalina.sh","run"]
