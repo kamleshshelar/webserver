@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kamleshshelarwebserver 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kamleshshelarwebserver
+  template:
+    metadata:
+      labels:
+        app: kamleshshelarwebserver 
+    spec:
+      containers:
+        - name: kamleshshelarwebserver 
+          image: meraazregistry.azurecr.io/kamleshshelarwebserver
+          ports:
+          - containerPort: 8080
